@@ -2,6 +2,7 @@ import ursina
 
 from fps.main.game_objects.Ground import Ground
 from fps.main.game_objects.Player import Player
+from fps.main.game_objects.gun.Gun import Gun
 
 
 def update():
@@ -11,6 +12,7 @@ def update():
 class Game:
     __app: ursina.Ursina
     __player: Player
+    __gun: Gun
 
     def __init__(self):
         self.__window_init()
@@ -28,7 +30,11 @@ class Game:
 
     def __game_objects_init(self):
         Ground()
+        self.__gun = Gun()
         self.__player = Player()
+        self.__gun.billboard = True
+        self.__gun.reparent_to(self.__player)
+        self.__gun.position = (1, 1.5, 1)
 
 
 if __name__ == "__main__":
