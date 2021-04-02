@@ -1,5 +1,6 @@
 import ursina
 
+from fps.main.game_objects.Ground import Ground
 from fps.main.game_objects.Player import Player
 
 
@@ -26,6 +27,7 @@ class Game:
         self.__app.run()
 
     def __game_objects_init(self):
+        Ground()
         self.__player = Player()
 
 
