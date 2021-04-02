@@ -2,12 +2,12 @@ import ursina
 
 
 class GameObject(ursina.Entity):
-    __model: str = "cube"
-    __scale: tuple[int, int, int] = (100, 0.1, 100)
-    __position: tuple[int, int, int] = (0, 0, 0)
-    __color: ursina.color.color = ursina.color.gold
-    __collider: str = "box"
-    __texture: str = "white_cube"
+    __model: str
+    __scale: tuple[int, int, int]
+    __position: tuple[int, int, int]
+    __color: ursina.color.color
+    __collider: str
+    __texture: str
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
