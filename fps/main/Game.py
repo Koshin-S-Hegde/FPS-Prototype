@@ -1,5 +1,7 @@
 import ursina
 
+from fps.main.game_objects.Player import Player
+
 
 def update():
     pass
@@ -7,9 +9,11 @@ def update():
 
 class Game:
     __app: ursina.Ursina
+    __player: Player
 
     def __init__(self):
         self.__window_init()
+        self.__game_objects_init()
         self.__run()
 
     def __window_init(self):
@@ -20,6 +24,9 @@ class Game:
 
     def __run(self):
         self.__app.run()
+
+    def __game_objects_init(self):
+        self.__player = Player()
 
 
 if __name__ == "__main__":
