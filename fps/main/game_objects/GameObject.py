@@ -2,20 +2,20 @@ import ursina
 
 
 class GameObject(ursina.Entity):
-    __model: str
-    __scale: tuple[int, int, int]
-    __position: tuple[int, int, int]
-    __color: ursina.color.color
-    __collider: str
-    __texture: str
+    _model: str
+    _scale: tuple[int, int, int]
+    _position: tuple[int, int, int]
+    _color: ursina.color.color
+    _collider_type: str
+    _texture_name: str
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.model = self.__model
-        self.scale_x = self.__scale[0]
-        self.scale_y = self.__scale[1]
-        self.scale_z = self.__scale[2]
-        self.position = self.__position
-        self.color = self.__color
-        self.collider = self.__collider
-        self.texture = self.__texture
+        self.model = self._model
+        self.scale_x = self._scale[0]
+        self.scale_y = self._scale[1]
+        self.scale_z = self._scale[2]
+        self.position = self._position
+        self.color = self._color
+        self.collider = self._collider_type
+        self.texture = self._texture_name

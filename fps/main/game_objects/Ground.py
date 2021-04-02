@@ -3,9 +3,9 @@ from fps.main.game_objects.GameObject import GameObject
 
 
 class Ground(GameObject):
-    __model: str = "cube"
-    __scale: tuple[int, int, int] = (100, 0.1, 100)
-    __position: tuple[int, int, int] = (0, 0, 0)
-    __color: ursina.color.color = ursina.color.gold
-    __collider: str = "box"
-    __texture: str = "white_cube"
+    _model: str = "cube"
+    _scale: tuple[int, int, int] = (100, 0.1, 100)
+    _position: tuple[int, int, int] = (0, 0, 0)
+    _color: ursina.color.color = ursina.color.gold
+    _collider_type: str = "box"
+    _texture_name: str = "white_cube"
