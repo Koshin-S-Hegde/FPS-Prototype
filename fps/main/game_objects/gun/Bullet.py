@@ -11,7 +11,7 @@ class Bullet(GameObject):
     _texture_name: str = "white_cube"
 
     def __init__(self, position: tuple[int, int, int], **kwargs):
-        self._position = (position[0], self._position[1], position[2])
+        self._position = (position[0], self._position[1] + position[1], position[2])
         super().__init__(**kwargs)
 
     def update_object(self):
