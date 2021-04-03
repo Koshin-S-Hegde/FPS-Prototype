@@ -7,6 +7,3 @@ class Player(FirstPersonController):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.position = self.__position
-
-    def update_object(self):
-        pass
