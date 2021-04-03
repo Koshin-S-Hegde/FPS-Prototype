@@ -34,7 +34,7 @@ class Game:
         self.__player = Player()
         self.__gun.billboard = True
         self.__gun.reparent_to(self.__player)
-        self.__gun.position = (1, 1.5, 1)
+        self.__gun.position = (1, 2, 1)
 
 
 if __name__ == "__main__":
