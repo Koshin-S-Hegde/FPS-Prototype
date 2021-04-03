@@ -11,14 +11,12 @@ class Enemy(GameObject):
     _collider_type: str = "box"
     _texture_name: str = "white_cube"
 
-    __keyboard_input_handler: KeyboardInput
     __has_been_shot: bool = False
 
-    def __init__(self, keyboard_input_handler, **kwargs):
+    def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.parent = ursina.scene
         self.model = "cube"
-        self.__keyboard_input_handler = keyboard_input_handler
 
     def update_object(self, is_shooting: bool):
         if self.hovered and is_shooting:
