@@ -1,3 +1,4 @@
+import ursina
 from ursina.prefabs.first_person_controller import FirstPersonController
 from fps.main.game_objects.gun.Bullet import Bullet
 import time
@@ -22,6 +23,5 @@ class Player(FirstPersonController):
             bullet.update_object()
 
     def __shoot(self):
-        self.__bullets.append(Bullet(self.position))
         self.__last_time_bullet_shot = time.time()
 
