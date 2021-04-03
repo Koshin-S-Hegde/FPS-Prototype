@@ -1,6 +1,5 @@
 import ursina
 from fps.main.game_objects.GameObject import GameObject
-from fps.main.input_handler.KeybordInput import KeyboardInput
 
 
 class Enemy(GameObject):
