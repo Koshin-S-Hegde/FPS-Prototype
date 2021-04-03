@@ -18,6 +18,9 @@ class Player(FirstPersonController):
                 self.__TIME_BETWEEN_EACH_BULLET_IN_SECONDS:
             self.__shoot()
 
+        for bullet in self.__bullets:
+            bullet.update_object()
+
     def __shoot(self):
         self.__bullets.append(Bullet(self.position))
         self.__last_time_bullet_shot = time.time()

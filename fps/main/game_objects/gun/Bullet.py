@@ -13,3 +13,6 @@ class Bullet(GameObject):
     def __init__(self, position: tuple[int, int, int], **kwargs):
         self._position = (position[0], self._position[1], position[2])
         super().__init__(**kwargs)
+
+    def update_object(self):
+        pass
