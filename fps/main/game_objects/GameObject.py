@@ -19,3 +19,6 @@ class GameObject(ursina.Entity):
         self.color = self._color
         self.collider = self._collider_type
         self.texture = self._texture_name
+
+    def update_object(self):
+        pass
