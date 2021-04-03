@@ -36,9 +36,9 @@ class Game:
         self.__gun.position = (1, 2, 1)
 
     def update_object(self):
+        self.__ground.update_object()
         self.__player.update_object(self.__keyboard_input.is_right_mouse_pressed())
         self.__gun.update_object()
-        self.__ground.update_object()
 
     def __input_handler_init(self):
         self.__keyboard_input = KeyboardInput()
