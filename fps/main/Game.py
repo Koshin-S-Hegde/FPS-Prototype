@@ -18,6 +18,7 @@ class Game:
     __enemies: list[Enemy] = []
     __last_time_shot: float = time()
     __TIME_BETWEEN_EVERY_SHOT_IN_SECOND: float = 1
+    __enemy_locations: list[tuple[float, float, float]] = [(0, 0.5, 0), (1, 0.5, 1), (5, 5, 10)]
 
     def __init__(self):
         self.__window_init()
@@ -37,10 +38,13 @@ class Game:
         self.__ground = Ground()
         self.__gun = Gun()
         self.__player = Player(self.__ground)
-        self.__enemies.append(Enemy())
         self.__gun.billboard = True
         self.__gun.reparent_to(self.__player)
         self.__gun.position = (1, 2, 1)
+
+        enemy_location: tuple[float, float, float]
+        for enemy_location in self.__enemy_locations:
+            self.__enemies.append(Enemy(enemy_location))
 
     def update_object(self):
         self.__ground.update_object()
