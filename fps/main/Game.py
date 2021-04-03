@@ -30,7 +30,7 @@ class Game:
     def __game_objects_init(self):
         self.__ground = Ground()
         self.__gun = Gun()
-        self.__player = Player()
+        self.__player = Player(self.__ground)
         self.__gun.billboard = True
         self.__gun.reparent_to(self.__player)
         self.__gun.position = (1, 2, 1)
